@@ -5,6 +5,13 @@ function loadImg(Img)
     return Variables.Main.LoadedImg[Img]
 end
 
+function loadFont(Font)
+    if Variables.Main.LoadedFonts[Font] == nil then
+        Variables.Main.LoadedFonts[Font] = love.graphics.newImage("resources/fonts/"..Font)
+    end
+    return Variables.Main.LoadedFonts[Font]
+end
+
 function loadSound(Sound, static)
     local stream = static or "stream"
     if Variables.Main.LoadedSounds[Sound] == nil then
