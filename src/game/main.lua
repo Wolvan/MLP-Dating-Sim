@@ -17,7 +17,6 @@ function requireFiles()
     require "objects.classes.camera"
     require "gui.menu.mainmenu"
     require "gui.menu.gamedraw"
-    require "maps.test"
     require "callbacks.draw"
     --require "callbacks.update"
     --require "callbacks.quit"
