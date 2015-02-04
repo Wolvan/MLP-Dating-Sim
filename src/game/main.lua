@@ -18,7 +18,7 @@ function requireFiles()
     require "gui.menu.mainmenu"
     require "gui.menu.gamedraw"
     require "callbacks.draw"
-    --require "callbacks.update"
+	require "callbacks.update"
     --require "callbacks.quit"
     --require "callbacks.focus"
 end
