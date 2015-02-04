@@ -1,3 +1,3 @@
 function love.draw()
-    Menus[Variables.Main.CurrentMenu].draw();
+    Menus[Variables.Main.CurrentMenu]:draw();
 end
