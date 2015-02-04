@@ -1,0 +1,1 @@
+I found out that a delay of 0.1 between key detection is a good value that doesn't seem to impact playstyle
