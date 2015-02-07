@@ -20,6 +20,13 @@ Button = {
 		end
 	end,
 	
+	isClicked = function (self, x, y)
+		if x > self.x1 and x < self.x2 and y > self.y1 and y < self.y2 then
+			return true
+		end
+		return false
+	end,
+	
     new = function (self, o, y_1, x_2, y_2, cb)
         if type(o) == "table" then
 			o = o
@@ -49,5 +56,13 @@ Button = {
 function drawButtons()
 	table.foreach(Buttons, function(index)
 		Buttons[index]:draw()
+	end)
+end
+
+function runButtons(x,y)
+	table.foreach(Buttons, function(index)
+		if Buttons[index]:isClicked(x,y) then
+			Buttons[index]:callback()
+		end
 	end)
 end

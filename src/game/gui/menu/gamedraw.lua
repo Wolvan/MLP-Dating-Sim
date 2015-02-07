@@ -1,5 +1,6 @@
 local t = 0
 local test
+local test2
 Menus.Game = Menu:new({
 	draw = function(self)
         image = loadImg(DrawVars.BackgroundImg)
@@ -21,7 +22,20 @@ Menus.Game = Menu:new({
 	update = function(self, dt)
 		if not test then
 			test = Button:new({
-				x1 = 30, y1 = 30, x2 = 1000, y2 = 200, text = "U a poo."
+				x1 = 30, y1 = 30, x2 = 1000, y2 = 200, text = "This... is a button",
+				callback = function(self)
+					test.visible = false
+					test2.visible = true
+				end
+			})
+		end
+		if not test2 then
+			test2 = Button:new({
+				x1 = 30, y1 = 250, x2 = 1000, y2 = 450, text = "Dear God",
+				callback = function(self)
+					test.visible = true
+					test2.visible = false
+				end
 			})
 		end
 	end
