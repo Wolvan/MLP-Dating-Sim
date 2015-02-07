@@ -6,7 +6,7 @@
 ]]--
 
 function initWindow()
-    love.graphics.setNewFont(12)
+	love.graphics.setFont(loadFont("Equestria.otf", 24));
     love.graphics.setBackgroundColor(255,255,255)
 end
 
@@ -15,6 +15,7 @@ function requireFiles()
     require "objects.misc.functions"
     require "objects.classes.menu"
     require "objects.classes.camera"
+    require "objects.classes.button"
     require "gui.menu.mainmenu"
     require "gui.menu.gamedraw"
     require "callbacks.draw"
