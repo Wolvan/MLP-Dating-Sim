@@ -4,7 +4,7 @@ function love.conf(t)
     t.console = true                  -- Attach a console (boolean, Windows only)
 
 	t.window = t.window or t.screen
-    t.window.title = "My little Pony Dating Sim DEV"-- The window title (string)
+    t.window.title = "Pony Souls: Prepare to date Edition" -- The window title (string)
     t.window.icon = nil                -- Filepath to an image to use as the window's icon (string)
     t.window.width = 1280              -- The window width (number)
     t.window.height = 720              -- The window height (number)
