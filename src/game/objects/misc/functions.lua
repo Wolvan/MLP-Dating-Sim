@@ -5,11 +5,12 @@ function loadImg(Img)
     return Variables.Main.LoadedImg[Img]
 end
 
-function loadFont(Font)
-    if Variables.Main.LoadedFonts[Font] == nil then
-        Variables.Main.LoadedFonts[Font] = love.graphics.newImage("resources/fonts/"..Font)
+function loadFont(Font, Size)
+	local size = Size or 12
+    if Variables.Main.LoadedFonts[Font..size] == nil then
+        Variables.Main.LoadedFonts[Font..size] = love.graphics.newFont("resources/fonts/"..Font, size)
     end
-    return Variables.Main.LoadedFonts[Font]
+    return Variables.Main.LoadedFonts[Font..size]
 end
 
 function loadSound(Sound, static)
@@ -36,4 +37,17 @@ table.contains = function(tab, elem)
         end
     end
     return false
+end
+
+function text(text)
+	love.graphics.printf(text, 30, 550, 1220,"left")
+end
+
+local oldType = type
+function type(obj)
+	if getmetatable(obj) then
+		return getmetatable(obj).__type or oldType(obj)
+	else
+		return oldType(obj)
+	end
 end
