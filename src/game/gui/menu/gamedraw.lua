@@ -15,28 +15,11 @@ Menus.Game = Menu:new({
 		love.graphics.draw(image,0,520)
 		image = loadImg(DrawVars.GameFakeMoney)
 		love.graphics.draw(image,1050,0)
-		text("Daisy: Wow that's a lot of cash!\nAnon: It's all from pre-orders on this game.\nPootis")
+		text("Daisy: OH MY GOD THIS IS ACTUALLY A THING!\nAnon: Well, of course it is, my dear Daisy. Hope you like this screen so far?")
 		--love.graphics.print("Daisy: Wow that's a lot of cash!", 30, 550)
 		--love.graphics.print("Anon: It's all from pre-orders on this game.", 30, 580)
     end,
 	update = function(self, dt)
-		if not test then
-			test = Button:new({
-				x1 = 30, y1 = 30, x2 = 1000, y2 = 200, text = "This... is a button",
-				callback = function(self)
-					test.visible = false
-					test2.visible = true
-				end
-			})
-		end
-		if not test2 then
-			test2 = Button:new({
-				x1 = 30, y1 = 250, x2 = 1000, y2 = 450, text = "Dear God",
-				callback = function(self)
-					test.visible = true
-					test2.visible = false
-				end
-			})
-		end
+		--Stub
 	end
 })

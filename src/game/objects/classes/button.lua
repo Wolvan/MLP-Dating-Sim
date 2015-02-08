@@ -2,8 +2,8 @@ local Buttons = {}
 
 Button = {
 	
-	x1 = 0, y1 = 0, x2 = 1, y2 = 2, visible = true, text = "",
-	tablepos = -1,
+	x1 = 0, y1 = 0, x2 = 1, y2 = 2, borderOverride = 30, visible = true, text = "",
+	tablepos = -1, imgOverride = nil,
 	
 	callback = function(self)
 		--stub
@@ -11,18 +11,30 @@ Button = {
 	
 	draw = function (self)
 		if self.visible then
-			love.graphics.setColor( 84, 84, 84, 150 )
-			love.graphics.rectangle("fill", self.x1, self.y1, self.x2-self.x1, self.y2-self.y1 )
-			love.graphics.setColor( 0,0,0 )
-			love.graphics.rectangle("line", self.x1, self.y1, self.x2-self.x1, self.y2-self.y1 )
-			love.graphics.setColor(255,255,255)
-			love.graphics.printf(self.text, self.x1 + 30, self.y1 + 30, self.x2 - self.x1 - 60, "center")
+			if self.imgOverride then
+				love.graphics.draw(self.imgOverride,self.x1,self.y1)
+				local width, height = self.imgOverride:getDimensions()
+				love.graphics.printf(self.text, self.x1 + self.borderOverride, self.y1 + self.borderOverride, width - self.borderOverride, "center")
+			else
+				love.graphics.setColor( 84, 84, 84, 150 )
+				love.graphics.rectangle("fill", self.x1, self.y1, self.x2-self.x1, self.y2-self.y1 )
+				love.graphics.setColor( 0,0,0 )
+				love.graphics.rectangle("line", self.x1, self.y1, self.x2-self.x1, self.y2-self.y1 )
+				love.graphics.setColor(255,255,255)
+				love.graphics.printf(self.text, self.x1 + self.borderOverride, self.y1 + self.borderOverride, self.x2 - self.x1 - self.borderOverride, "center")
+			end
 		end
 	end,
 	
 	isClicked = function (self, x, y)
-		if x > self.x1 and x < self.x2 and y > self.y1 and y < self.y2 then
-			return true
+		if self.imgOverride then
+			if x > self.x1 and x < self.imgOverride:getWidth() + self.x1 and y > self.y1 and y < self.imgOverride:getHeight() + self.y1 then
+				return true
+			end
+		else
+			if x > self.x1 and x < self.x2 and y > self.y1 and y < self.y2 then
+				return true
+			end
 		end
 		return false
 	end,
