@@ -9,9 +9,13 @@ newGame = Button:new({
 	end
 })
 loadGame = Button:new({
-	x1 = (love.window.getWidth() / 2) - (loadImg("menu_button.png"):getWidth() / 2), y1 = 400, borderOverride = 30, text = "Load Game", imgOverride = loadImg("menu_button.png"),
+	x1 = (love.window.getWidth() / 2) - (loadImg("menu_button.png"):getWidth() / 2), y1 = 400, borderOverride = 30, text = "Test network", imgOverride = loadImg("menu_button.png"),
 	callback = function(self)
-		--Stub
+		newGame.visible = false
+		self.visible = false
+		credits.visible = false
+		exitGame.visible = false
+		Variables.Main.CurrentMenu = "Network"
 	end
 })
 credits = Button:new({
