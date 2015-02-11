@@ -4,15 +4,14 @@ Variables = {
         ActiveCamera = "default",
         LoadedImg = {},
         LoadedSounds = {},
-		LoadedFonts = {}
+		LoadedFonts = {},
+		InitialDialogueFile = "aj_1"
     }
 }
-
 DrawVars = {
-	BackgroundImg = "empty_Ponyville_street_illuminati.png",
-	LeftCharImg = "fake_daisy_vector.png",
-	RightCharImg = "anon_pony_by_aginpro.png",
-    GameFakeMoney = "dat_money_doe.png"
+	BackgroundImg = "",--"empty_Ponyville_street_illuminati.png",
+	LeftCharImg = "",--"fake_daisy_vector.png",
+	RightCharImg = ""--"anon_pony_by_aginpro.png",
 }
 -- KodexMonkey's Testing Variables
 TestVars = {

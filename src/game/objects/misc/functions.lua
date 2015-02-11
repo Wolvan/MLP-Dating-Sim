@@ -51,3 +51,30 @@ function type(obj)
 		return oldType(obj)
 	end
 end
+
+function string.starts(String,Start)
+   return string.sub(String,1,string.len(Start))==Start
+end
+
+function string.ends(String,End)
+   return End=='' or string.sub(String,-string.len(End))==End
+end
+
+function string:split(pPattern)
+   local Table = {}  -- NOTE: use {n = 0} in Lua-5.0
+   local fpat = "(.-)" .. pPattern
+   local last_end = 1
+   local s, e, cap = self:find(fpat, 1)
+   while s do
+      if s ~= 1 or cap ~= "" then
+     table.insert(Table,cap)
+      end
+      last_end = e+1
+      s, e, cap = self:find(fpat, last_end)
+   end
+   if last_end <= #self then
+      cap = self:sub(last_end)
+      table.insert(Table, cap)
+   end
+   return Table
+end

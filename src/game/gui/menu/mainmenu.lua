@@ -5,6 +5,7 @@ newGame = Button:new({
 		loadGame.visible = false
 		credits.visible = false
 		exitGame.visible = false
+		parseDialogue(Variables.Main.InitialDialogueFile)
 		Variables.Main.CurrentMenu = "Game"
 	end
 })

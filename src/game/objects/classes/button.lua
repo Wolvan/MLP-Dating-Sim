@@ -27,13 +27,15 @@ Button = {
 	end,
 	
 	isClicked = function (self, x, y)
-		if self.imgOverride then
-			if x > self.x1 and x < self.imgOverride:getWidth() + self.x1 and y > self.y1 and y < self.imgOverride:getHeight() + self.y1 then
-				return true
-			end
-		else
-			if x > self.x1 and x < self.x2 and y > self.y1 and y < self.y2 then
-				return true
+		if self.visible then
+			if self.imgOverride then
+				if x > self.x1 and x < self.imgOverride:getWidth() + self.x1 and y > self.y1 and y < self.imgOverride:getHeight() + self.y1 then
+					return true
+				end
+			else
+				if x > self.x1 and x < self.x2 and y > self.y1 and y < self.y2 then
+					return true
+				end
 			end
 		end
 		return false

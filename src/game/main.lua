@@ -7,7 +7,7 @@
 
 function initWindow()
 	love.graphics.setFont(loadFont("Equestria.otf", 24));
-    love.graphics.setBackgroundColor(255,255,255)
+    love.graphics.setBackgroundColor(0,0,0)
 end
 
 function requireFiles()
