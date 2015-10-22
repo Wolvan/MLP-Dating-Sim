@@ -1,0 +1,16 @@
+SAY;Anon: Well, with that apple on your ass and that look on your face, it isn't hard to put two and two together.
+SAY;Applejack: Well, you can stick with your fancy numbers, I'll stick to what I know, BUCKING
+SAY;(Applejack bucks you in the face and you black out immediately)
+CHANGEIMG;RIGHT;
+CHANGEIMG;BACKGROUND;
+SAY; 
+CHANGEIMG;BACKGROUND;empty_Ponyville_street_illuminati.png
+SAY; 
+SAY;With a bitch of a headache and the faint memory of orange hooves hitting you in the jaw, you get up from the floor and take a look around
+SAY;Daylight seems to be flooding through the open door, which Applejack most likely accidentally-on-purpose left open
+SAY;Now your miserable excuse for a house looks and smells like shit. Wonderful
+SAY;What do you want to do next?
+
+CHOICE;1;Go to Twilight's library;twi_1
+CHOICE;2;Go to Everfree;everfree_1
+CHOICE;3;NOT DONE;not_done

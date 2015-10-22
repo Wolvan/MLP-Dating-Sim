@@ -1,0 +1,9 @@
+CHANGEIMG;RIGHT;
+CHANGEIMG;BACKGROUND;
+SAY;
+CHANGEIMG;BACKGROUND;empty_Ponyville_street_illuminati.png
+SAY;As light streams through the rectangular hole in the wall you get to call a window, you get up off your makeshift bed and decide to start a day, tired and sore, but excited for what your adventure will bring.
+
+CHOICE;1;Go to Twilight's library;twi_1
+CHOICE;2;Go to Everfree;everfree_1
+CHOICE;3;NOT DONE;not_done

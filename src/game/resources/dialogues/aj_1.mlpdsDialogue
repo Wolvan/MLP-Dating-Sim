@@ -1,0 +1,5 @@
+CHANGEIMG;BACKGROUND;empty_Ponyville_street_illuminati.png
+
+CHOICE;1;Yes Applejack, what do you want?;aj_2a
+CHOICE;2;Yeah, hi, I'm Anon and I just moved here.;aj_2b
+CHOICE;3;I didn't expect visitors so soon;aj_2c

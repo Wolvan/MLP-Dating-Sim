@@ -1,0 +1,7 @@
+CHANGEIMG;RIGHT;happy_aj.png
+SAY;Anon: Yes Applejack, what do you want?
+SAY;Applejack: Well, Ah was j- How in the hay do you know my name already?
+
+CHOICE;1;With those apples on your ass;aj_3a
+CHOICE;2;Lucky guess;aj_3b
+CHOICE;3;I heard your name before;aj_3c

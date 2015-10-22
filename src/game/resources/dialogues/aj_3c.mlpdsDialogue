@@ -1,0 +1,4 @@
+SAY;Anon: Well, I heard your name in passing...\nThey said you ran some apple farm just outside town.
+SAY;Applejack: Oh, I guess that makes sense... Yeah, s'called Sweet Apple Acres, an Ah live there with mah brother, lil' sis and my ole Granny Smith. So... Uh... Ah guess Ah'll... See ya around, Anonymous...
+
+PARSE;wakeup
